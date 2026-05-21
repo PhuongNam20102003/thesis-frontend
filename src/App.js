@@ -117,7 +117,6 @@ function App() {
   </ProtectedRoute>
 } />
 
-// Student xem tiến độ của mình
 <Route path="/my-progress" element={
   <ProtectedRoute role="student">
     <Navbar /><FormProgress role="student" />
@@ -132,7 +131,7 @@ function App() {
       <FormProgress role="teacher" />
     </ProtectedRoute>
   }
-/>
+/>  
 
           <Route path="/profile" element={
   <ProtectedRoute>
