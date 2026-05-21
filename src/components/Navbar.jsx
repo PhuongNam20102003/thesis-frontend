@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import NotificationBell from './NotificationBell';
+import NotificationBell from './Notificationbell';
 
 const Navbar = () => {
   const { user, logout } = useAuth();
