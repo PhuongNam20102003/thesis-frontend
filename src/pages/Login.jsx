@@ -197,7 +197,7 @@ const Login = () => {
           {/* Đăng ký */}
           <p style={{ textAlign: 'center', marginTop: 24, fontSize: 13, color: '#888' }}>
             Chưa có tài khoản?{' '}
-            <Link to="/register" style={{ color: '#1D9E75', fontWeight: 600, textDecoration: 'none' }}>
+           <Link to="/register" style={{ color: '#1D9E75', fontWeight: 600, textDecoration: 'none' }}>
               Đăng ký ngay
             </Link>
           </p>
