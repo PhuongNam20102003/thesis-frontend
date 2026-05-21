@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import NotificationBell from './NotificationBell';
 
 const Navbar = () => {
   const { user, logout } = useAuth();
@@ -68,7 +69,6 @@ const Navbar = () => {
             onMouseEnter={e => e.currentTarget.style.background = '#f5f5f5'}
             onMouseLeave={e => e.currentTarget.style.background = 'none'}
           >
-            {/* 3 gạch hamburger */}
             {[0, 1, 2].map(i => (
               <span key={i} style={{
                 display: 'block', width: 22, height: 2,
@@ -90,12 +90,22 @@ const Navbar = () => {
           </span>
         </div>
 
-        {/* User info */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+        {/* User info + Bell */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+
+          {/* 🔔 Notification Bell */}
+          <NotificationBell />
+
+          {/* Divider */}
+          <div style={{ width: 1, height: 24, background: '#e5e7eb', margin: '0 4px' }} />
+
+          {/* Tên + role */}
           <div style={{ textAlign: 'right' }}>
             <div style={{ fontSize: 13, fontWeight: 600, color: '#333' }}>{user?.full_name}</div>
             <div style={{ fontSize: 11, color: '#aaa' }}>{roleLabel[user?.role]}</div>
           </div>
+
+          {/* Avatar */}
           <div style={{
             width: 36, height: 36, borderRadius: '50%',
             background: 'linear-gradient(135deg, #0F6E56, #1D9E75)',
@@ -107,7 +117,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Overlay mờ khi menu mở */}
+      {/* Overlay */}
       {menuOpen && (
         <div
           onClick={() => setMenuOpen(false)}
