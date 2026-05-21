@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: 'https://thesis-backend-8kyj.onrender.com',
 });
 
 // Tự động gắn token vào mọi request
