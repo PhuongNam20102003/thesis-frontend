@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { login as loginService } from '../services/authService';
 import toast from 'react-hot-toast';
@@ -193,14 +192,6 @@ const Login = () => {
               {loading ? '⏳ Đang đăng nhập...' : 'Đăng nhập →'}
             </button>
           </form>
-
-          {/* Đăng ký */}
-          <p style={{ textAlign: 'center', marginTop: 24, fontSize: 13, color: '#888' }}>
-            Chưa có tài khoản?{' '}
-           <Link to="/register" style={{ color: '#1D9E75', fontWeight: 600, textDecoration: 'none' }}>
-              Đăng ký ngay
-            </Link>
-          </p>
         </div>
       </div>
     </div>
