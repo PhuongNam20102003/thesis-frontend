@@ -42,9 +42,14 @@ const Navbar = () => {
       { path: '/profile', label: 'Thông tin cá nhân' },
       { path: '/change-password', label: 'Đổi mật khẩu' },
     ],
+    admin: [
+  { path: '/admin/users',     label: 'Quản lý tài khoản' },
+  { path: '/profile',         label: 'Thông tin cá nhân' },
+  { path: '/change-password', label: 'Đổi mật khẩu' },
+],
   };
 
-  const roleLabel = { student: 'Sinh viên', teacher: 'Giảng viên', head: 'Trưởng ngành' };
+  const roleLabel = { student: 'Sinh viên', teacher: 'Giảng viên', head: 'Trưởng ngành', admin: 'Quản trị viên' };
   const links = navLinks[user?.role] || [];
 
   return (

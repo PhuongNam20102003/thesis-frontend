@@ -18,7 +18,7 @@ const Login = () => {
     try {
       const res = await loginService(email, password);
       login(res.data.user, res.data.token);
-      const pages = { student: '/topics', teacher: '/my-topics', head: '/overview' };
+      const pages = { student: '/topics', teacher: '/my-topics', head: '/overview', admin:'/admin/users'};
       navigate(pages[res.data.user.role] || '/login');
       toast.success(`Chào mừng, ${res.data.user.full_name}!`);
     } catch (err) {

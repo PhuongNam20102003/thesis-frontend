@@ -10,7 +10,7 @@ const ProtectedRoute = ({ children, role }) => {
 
   if (role && user.role !== role) {
     // Điều hướng về trang đúng của từng role
-    const homePages = { student: '/topics', teacher: '/my-topics', head: '/overview' };
+    const homePages = { student: '/topics', teacher: '/my-topics', head: '/overview', admin:'/admin/users'};
     return <Navigate to={homePages[user.role] || '/login'} />;
   }
 

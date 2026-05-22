@@ -26,6 +26,7 @@ import FormBM08 from './pages/student/FormBM08';
 import FormSubmissions from './pages/teacher/FormSubmissions';
 import FormDetail from './pages/teacher/FormDetail';
 import FormProgress from './pages/student/FormProgress';
+import AdminUsers from './pages/admin/AdminUsers';
 
 function App() {
   return (
@@ -120,6 +121,12 @@ function App() {
 <Route path="/my-progress" element={
   <ProtectedRoute role="student">
     <Navbar /><FormProgress role="student" />
+  </ProtectedRoute>
+} />
+
+<Route path="/admin/users" element={
+  <ProtectedRoute role="admin">
+    <Navbar /><AdminUsers />
   </ProtectedRoute>
 } />
 
